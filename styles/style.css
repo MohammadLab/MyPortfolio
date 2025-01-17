@@ -463,21 +463,11 @@ section h2 {
 .detailed-about {
     padding-top: 120px;
     padding-bottom: 4rem;
-    background: url('../images/about-bg.jpg') center/cover fixed;
+    background: #f5f5f5;
     position: relative;
     min-height: 100vh;
 }
 
-.detailed-about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 1;
-}
 
 .detailed-about > * {
     position: relative;
@@ -498,12 +488,18 @@ section h2 {
     padding: 0 2rem;
 }
 
-.about-section p {
+.about-section p, .about-section li {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    color: #444;
+    color: #333;
     font-weight: 300;
+}
+
+.about-section ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Footer */
