@@ -248,14 +248,16 @@ section h2 {
 .project-image {
     position: absolute;
     left: 0;
-    width: 50%;
-    height: 360px;  /* This maintains the 16:9 ratio at half width */
+    width: 60%;
+    height: 360px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .programming-projects .project-image {
     left: auto;
     right: 0;
+    width: 60%;
 }
 
 .project-image img {
@@ -314,8 +316,7 @@ section h2 {
     transform: translateX(20px);
 }
 
-.project-category:hover .project-image img {
-    transform: scale(1.05);
+.project-image img {
     transition: transform 0.3s ease;
 }
 
