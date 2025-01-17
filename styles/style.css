@@ -253,6 +253,11 @@ section h2 {
     z-index: 1;
 }
 
+.programming-projects .project-image {
+    left: auto;
+    right: 0;
+}
+
 .project-image img {
     width: 100%;
     height: 100%;
@@ -266,6 +271,11 @@ section h2 {
     width: 60%;
     margin-left: auto;
     z-index: 2;
+}
+
+.programming-projects .project-content-wrapper {
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .project-content {
@@ -293,6 +303,10 @@ section h2 {
     transform: translateX(-20px);
     background: rgba(42, 42, 42, 0.98);
     border-color: #0095ff;
+}
+
+.programming-projects:hover .project-content {
+    transform: translateX(20px);
 }
 
 .project-category:hover .project-image img {
