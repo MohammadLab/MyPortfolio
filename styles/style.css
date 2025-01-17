@@ -249,7 +249,7 @@ section h2 {
     position: absolute;
     left: 0;
     width: 50%;
-    height: 400px;
+    height: 360px;  /* This maintains the 16:9 ratio at half width */
     z-index: 1;
 }
 
