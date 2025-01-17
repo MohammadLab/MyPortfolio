@@ -103,20 +103,8 @@ nav {
     position: absolute;
     left: -300%;
     right: -300%;
-    height: 80px;
-    top: 25%;
-    transform: translateY(-50%) skewX(-15deg);
-    background: rgba(128, 128, 128, 0.3);
-    z-index: -1;
-}
-
-.hero-content::after {
-    content: '';
-    position: absolute;
-    left: -20%;
-    right: 120%;
-    height: 40px;
-    top: 50%;
+    height: 120px;
+    top: 35%;
     transform: translateY(-50%) skewX(-15deg);
     background: rgba(128, 128, 128, 0.3);
     z-index: -1;
