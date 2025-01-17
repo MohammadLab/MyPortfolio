@@ -429,9 +429,28 @@ section h2 {
 .experience-item {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #fff;
+    background: #1a1a1a;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-item h3 {
+    color: #0095ff;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .company {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
 /* Contact */
@@ -506,7 +525,8 @@ section h2 {
 footer {
     text-align: center;
     padding: 2rem;
-    background: #f8f9fa;
+    background: #1a1a1a;
+    color: #fff;
 }
 
 /* Responsive Design */
