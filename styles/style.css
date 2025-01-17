@@ -101,8 +101,8 @@ nav {
 .hero-content::after {
     content: '';
     position: absolute;
-    left: -10%;
-    right: -100%;
+    left: -20%;
+    right: -200%;
     height: 40px;
     top: 50%;
     transform: translateY(-50%) skewX(-15deg);
