@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #fff;
     background-color: #121212;
+    font-weight: 300;
 }
 
 /* Navigation */
@@ -192,6 +193,7 @@ section h2 {
     font-size: 1.4rem;
     line-height: 1.8;
     margin-bottom: 2rem;
+    font-weight: 300;
 }
 
 .about-btn {
@@ -336,6 +338,7 @@ section h2 {
     line-height: 1.8;
     margin-bottom: 2rem;
     transition: color 0.3s ease;
+    font-weight: 300;
 }
 
 .project-links {
@@ -414,6 +417,7 @@ section h2 {
 .skill-item p {
     color: #fff;
     font-size: 1.1rem;
+    font-weight: 300;
 }
 
 /* Experience */
@@ -499,6 +503,7 @@ section h2 {
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: #444;
+    font-weight: 300;
 }
 
 /* Footer */
