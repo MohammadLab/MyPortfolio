@@ -62,7 +62,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 15%;
+    padding-left: 8%;
     text-align: left;
     background: url('../images/programming-bg.jpg') center/cover;
     position: relative;
@@ -85,8 +85,8 @@ nav {
 }
 
 .profile-image img {
-    width: 250px;
-    height: 375px;
+    width: 300px;
+    height: 450px;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #fff;
@@ -101,12 +101,13 @@ nav {
 .hero-content::after {
     content: '';
     position: absolute;
-    left: -20%;
+    left: -10%;
     right: -100%;
-    height: 100%;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%) skewX(-15deg);
     background: rgba(128, 128, 128, 0.3);
     z-index: -1;
-    transform: skewX(-15deg);
 }
 
 .hero-content h1 {
