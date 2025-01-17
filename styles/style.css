@@ -264,9 +264,28 @@ section h2 {
 /* Detailed About Page */
 .detailed-about {
     padding-top: 120px;
+    padding-bottom: 4rem;
+    background: url('../images/about-bg.jpg') center/cover fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+.detailed-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1;
+}
+
+.detailed-about > * {
+    position: relative;
+    z-index: 2;
     max-width: 1000px;
     margin: 0 auto;
-    padding-bottom: 4rem;
 }
 
 .detailed-about h1 {
