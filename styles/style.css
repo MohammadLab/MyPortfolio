@@ -111,14 +111,14 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
     color: #fff;
 }
 
 .hero-content p {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .typed-text {
