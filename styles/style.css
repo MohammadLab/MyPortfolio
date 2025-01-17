@@ -242,14 +242,14 @@ section h2 {
     align-items: center;
     position: relative;
     margin: 4rem 0;
-    height: 400px;
+    height: 360px;
 }
 
 .project-image {
     position: absolute;
     left: 0;
     width: 60%;
-    height: 360px;
+    height: 100%;
     z-index: 1;
     overflow: hidden;
 }
