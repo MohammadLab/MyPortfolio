@@ -102,7 +102,7 @@ nav {
     content: '';
     position: absolute;
     left: -20%;
-    right: -200%;
+    right: 120%;
     height: 40px;
     top: 50%;
     transform: translateY(-50%) skewX(-15deg);
