@@ -600,16 +600,25 @@ footer {
     line-height: 1.6;
 }
 
-.project-showcase {
-    display: flex;
-    gap: 2rem;
+.showcase-image {
+    max-width: 500px;
     margin: 2rem 0;
-    flex-wrap: wrap;
 }
 
-.showcase-image {
-    flex: 1;
-    min-width: 300px;
+.right-image {
+    float: right;
+    margin-left: 2rem;
+}
+
+.left-image {
+    float: left;
+    margin-right: 2rem;
+}
+
+.project-details::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .project-img {
