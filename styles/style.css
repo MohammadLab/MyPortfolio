@@ -240,36 +240,71 @@ section h2 {
 .project-category {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    padding: 2rem;
-    background: rgba(42, 42, 42, 0.5);
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    margin: 4rem 0;
+    min-height: 400px;
 }
 
 .project-image {
-    flex: 0 0 45%;
+    position: absolute;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 1;
 }
 
 .project-image img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.project-content-wrapper {
+    position: relative;
+    width: 60%;
+    margin-left: auto;
+    z-index: 2;
+}
+
 .project-content {
-    flex: 0 0 55%;
+    background: rgba(42, 42, 42, 0.95);
+    padding: 3rem 4rem;
     text-align: right;
-    padding: 2rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.project-content {
+    background: rgba(42, 42, 42, 0.95);
+    padding: 3rem 4rem;
+    text-align: right;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    transition: all 0.3s ease;
+}
+
+.project-category:hover .project-content {
+    transform: translateX(-20px);
+    background: rgba(42, 42, 42, 0.98);
+    border-color: #0095ff;
+}
+
+.project-category:hover .project-image img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .project-content h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #0095ff;
+    transition: color 0.3s ease;
 }
 
 .project-content p {
@@ -277,6 +312,7 @@ section h2 {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
+    transition: color 0.3s ease;
 }
 
 .project-links {
