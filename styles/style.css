@@ -361,6 +361,61 @@ section h2 {
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
 }
 
+/* Skills Section */
+.skills {
+    background-color: #1a1a1a;
+    padding: 5rem 2rem;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-category {
+    margin-bottom: 3rem;
+}
+
+.skills-category h3 {
+    color: #0095ff;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.skill-item {
+    background: rgba(42, 42, 42, 0.95);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: #0095ff;
+    box-shadow: 0 5px 15px rgba(0, 149, 255, 0.2);
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0095ff;
+}
+
+.skill-item p {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
 /* Experience */
 .experience-timeline {
     max-width: 800px;
