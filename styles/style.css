@@ -103,8 +103,8 @@ nav {
     position: absolute;
     left: -300%;
     right: -300%;
-    height: 120px;
-    top: 35%;
+    height: 140px;
+    top: 40%;
     transform: translateY(-50%) skewX(-15deg);
     background: rgba(128, 128, 128, 0.3);
     z-index: -1;
