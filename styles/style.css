@@ -288,6 +288,11 @@ section h2 {
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+.programming-projects .project-content {
+    text-align: left;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+
 .project-content {
     background: rgba(42, 42, 42, 0.95);
     padding: 3rem 4rem;
