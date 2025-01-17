@@ -121,6 +121,26 @@ nav {
     font-size: 1.2rem;
 }
 
+.typed-text {
+    font-weight: normal;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #fff;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100% { background-color: #fff; }
+}
+
 /* Sections */
 section {
     padding: 5rem 2rem;
