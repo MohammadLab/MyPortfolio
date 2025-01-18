@@ -243,8 +243,13 @@ section h2 {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 4rem 0;
-    height: 360px;
+    margin: 6rem 0;
+    height: 400px;
+    transition: transform 0.3s ease;
+}
+
+.project-category:hover {
+    transform: scale(1.02);
 }
 
 .project-image {
@@ -287,12 +292,14 @@ section h2 {
 
 .project-content {
     background: rgba(42, 42, 42, 0.95);
-    padding: 3rem 4rem;
+    padding: 3.5rem 4.5rem;
     text-align: right;
     position: relative;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .programming-projects .project-content {
@@ -388,24 +395,27 @@ section h2 {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+    padding: 1.5rem;
+    perspective: 1000px;
 }
 
 .skill-item {
     background: rgba(42, 42, 42, 0.95);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 12px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) rotateX(10deg);
     border-color: #0095ff;
-    box-shadow: 0 5px 15px rgba(0, 149, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 149, 255, 0.15);
+    background: rgba(42, 42, 42, 0.98);
 }
 
 .skill-item i {
@@ -427,13 +437,33 @@ section h2 {
 }
 
 .experience-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
     background: #1a1a1a;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #0095ff, #00c3ff);
+    opacity: 0.8;
+}
+
+.experience-item:hover {
+    transform: translateX(8px);
+    background: #1f1f1f;
+    border-color: rgba(0, 149, 255, 0.3);
 }
 
 .experience-item h3 {
