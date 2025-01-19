@@ -173,14 +173,57 @@
         <h2>Contact Me</h2>
         <div class="contact-content">
             <p>Let's work together! Reach out to me through:</p>
-            <div class="contact-links">
-                <a href="mailto:labakmohammad.0@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://www.linkedin.com/in/mohammad-labak/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/MohammadLab"><i class="fab fa-github"></i> GitHub</a>
+            <div class="contact-links" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+                <a href="mailto:labakmohammad.0@gmail.com" class="modern-btn">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-labak/" class="modern-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/MohammadLab" class="modern-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="contact.html" class="modern-btn">
+                    <i class="fas fa-info-circle"></i> More Contact Info
+                </a>
             </div>
-            <a href="contact.html" class="about-btn" style="margin-top: 2rem;">More Contact Info</a>
         </div>
     </section>
+
+    <style>
+        .modern-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: 500;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .modern-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+            border-color: #444;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .modern-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .modern-btn i {
+            margin-right: 8px;
+        }
+    </style>
 
     <footer>
         <p>&copy; 2025 Mohammad Labak. All rights reserved.</p>
