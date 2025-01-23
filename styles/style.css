@@ -586,10 +586,12 @@ footer {
     display: flex;
     gap: 20px;
     align-items: flex-start;
+    flex-direction: row-reverse;
 }
 
 .uefn-project .project-image {
     flex: 0 0 300px;
+    margin-left: 20px;
 }
 
 .uefn-project .preview-image {
