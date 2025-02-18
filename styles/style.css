@@ -1,3 +1,40 @@
+/* Custom Cursor */
+* {
+    cursor: none;
+}
+
+/* Custom cursor elements */
+.cursor-dot,
+.cursor-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #0095ff;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(0, 149, 255, 0.5);
+    transition: all 0.2s ease-out;
+}
+
+.cursor-hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(0, 149, 255, 0.1);
+    border-color: rgba(0, 149, 255, 0);
+}
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -81,6 +118,13 @@ nav {
 .nav-links a:hover {
     color: #0095ff;
     background-color: rgba(0, 149, 255, 0.1);
+    animation: linkPulse 0.5s ease-out;
+}
+
+@keyframes linkPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 .nav-links a:hover::after {
@@ -403,9 +447,23 @@ section h2 {
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(2deg);
     border-color: #0095ff;
     box-shadow: 0 5px 15px rgba(0, 149, 255, 0.2);
+    animation: skillGlow 1.5s infinite alternate;
+}
+
+@keyframes skillGlow {
+    from {
+        box-shadow: 0 0 5px #0095ff,
+                    0 0 10px #0095ff,
+                    0 0 15px #0095ff;
+    }
+    to {
+        box-shadow: 0 0 10px #0095ff,
+                    0 0 20px #0095ff,
+                    0 0 30px #0095ff;
+    }
 }
 
 .skill-item i {
