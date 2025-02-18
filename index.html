@@ -16,7 +16,7 @@
         }
         
         .hero-content, .about-content, .projects-container, .skills-container {
-            max-width: 100%;
+            max-width: 50%;
             padding: 0 20px;
             box-sizing: border-box;
             margin: 0 auto;
@@ -59,31 +59,35 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero" style="display: flex; align-items: center; justify-content: center; gap: 2rem; padding: 2rem;">
-        <div class="hero-content" style="text-align: left;">
-            <div class="profile-image">
-                <img src="images/profile.jpg" alt="Mohammad Labak">
+        <div class="hero-content" style="display: flex; flex-direction: row; align-items: center; text-align: left;">
+            <div class="profile-image" style="flex-shrink: 0;">
+                <img src="images/profile.jpg" alt="Mohammad Labak" style="max-width: 450px; border-radius: 50%;"> <!-- Image 3x bigger -->
             </div>
-            <h1 style="margin-bottom: 1rem;">Mohammad Labak</h1>
-            <p style="margin-bottom: 1rem;">I am a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-            <div class="hero-buttons" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; justify-content: center;">
-                <a href="resume.html" class="modern-btn">
-                    <i class="fas fa-file-alt"></i> Resume
-                </a>
-                <a href="about.html" class="modern-btn">
-                    <i class="fas fa-user"></i> About
-                </a>
-                <a href="programming-projects.html" class="modern-btn">
-                    <i class="fas fa-code"></i> Programming Projects
-                </a>
-                <a href="unreal-projects.html" class="modern-btn">
-                    <i class="fas fa-gamepad"></i> Unreal Projects
-                </a>
-                <a href="contact.html" class="modern-btn">
-                    <i class="fas fa-envelope"></i> Contact
-                </a>
+            <div>
+                <h1 style="margin-bottom: 1rem;">Mohammad Labak</h1>
+                <p style="margin-bottom: 1rem;">I am a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                <div class="hero-buttons" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; justify-content: center;">
+                    <a href="resume.html" class="modern-btn">
+                        <i class="fas fa-file-alt"></i> Resume
+                    </a>
+                    <a href="about.html" class="modern-btn">
+                        <i class="fas fa-user"></i> About
+                    </a>
+                    <a href="programming-projects.html" class="modern-btn">
+                        <i class="fas fa-code"></i> Programming Projects
+                    </a>
+                    <a href="unreal-projects.html" class="modern-btn">
+                        <i class="fas fa-gamepad"></i> Unreal Projects
+                    </a>
+                    <a href="contact.html" class="modern-btn">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+    
+    
 
     <!-- About Section -->
     <section id="about" class="about">
