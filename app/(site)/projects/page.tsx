@@ -11,7 +11,7 @@ export default function ProjectsPage() {
   const filtered = useMemo(() => {
     return projects.filter(p => {
       const matchText = (p.title + " " + p.description + " " + p.tech.join(" ")).toLowerCase().includes(q.toLowerCase());
-      const matchCat = cat === "All" ? true : p.categories.includes(cat);
+      const matchCat = cat === "All" ? true : p.categories.includes(cat as any);
       return matchText && matchCat;
     });
   }, [q, cat]);
