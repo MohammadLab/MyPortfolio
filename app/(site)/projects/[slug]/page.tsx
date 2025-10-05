@@ -1,16 +1,18 @@
 import { projects } from "@/lib/projects";
 import Image from "next/image";
 
+// ✅ The params prop must be async in Next.js 15
 type PageProps = {
-  params: Promise<{ slug: string }>; // 👈 params is async in Next 15
+  params: Promise<{ slug: string }>;
 };
 
+// ✅ Generate static params for all project pages
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
 export default async function ProjectPage({ params }: PageProps) {
-  // ✅ Await params before using
+  // ✅ Await params before accessing
   const { slug } = await params;
 
   const project = projects.find((p) => p.slug === slug);
