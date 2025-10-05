@@ -1,38 +1,57 @@
-
 import { projects } from "@/lib/projects";
 import Image from "next/image";
-import Link from "next/link";
 
-type Props = { params: { slug: string } };
+type PageProps = {
+  params: Promise<{ slug: string }>; // 👈 params is async in Next 15
+};
 
-export default function ProjectDetail({ params }: Props) {
-  const project = projects.find(p => p.slug === params.slug);
+export async function generateStaticParams() {
+  return projects.map((p) => ({ slug: p.slug }));
+}
+
+export default async function ProjectPage({ params }: PageProps) {
+  // ✅ Await params before using
+  const { slug } = await params;
+
+  const project = projects.find((p) => p.slug === slug);
+
   if (!project) {
     return (
-      <div className="container">
-        <h1 className="text-3xl">Project not found</h1>
-        <Link href="/projects" className="underline">Back to Projects</Link>
+      <div className="container py-20 text-center">
+        <h1 className="text-3xl font-semibold">Project not found</h1>
       </div>
     );
   }
 
   return (
-    <div className="container space-y-8">
-      <h1 className="text-4xl">{project.title}</h1>
+    <div className="container py-20 space-y-8">
+      <h1 className="text-4xl font-bold">{project.title}</h1>
+
       {project.image && (
-        <Image src={project.image} alt={project.title} width={1200} height={630} className="rounded-xl border border-white/10" />
+        <div className="relative aspect-video w-full max-w-3xl mx-auto">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
       )}
-      <p className="text-lg opacity-90">{project.description}</p>
-      <div className="flex flex-wrap gap-2">
-        {project.tech.map(t => (
-          <span key={t} className="px-3 py-1 rounded-full border border-white/10 text-sm">{t}</span>
+
+      <p className="text-lg opacity-90 max-w-2xl mx-auto text-center">
+        {project.description}
+      </p>
+
+      <div className="flex flex-wrap justify-center gap-3">
+        {project.tech.map((t) => (
+          <span
+            key={t}
+            className="px-3 py-1 border border-white/10 rounded-md text-sm"
+          >
+            {t}
+          </span>
         ))}
       </div>
-      <div className="flex gap-4">
-        {project.github && <a className="underline" href={project.github} target="_blank">GitHub</a>}
-        {project.demo && <a className="underline" href={project.demo} target="_blank">Live Demo</a>}
-      </div>
-      <Link href="/projects" className="underline">← Back to Projects</Link>
     </div>
   );
 }
