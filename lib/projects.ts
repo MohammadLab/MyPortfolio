@@ -10,7 +10,7 @@ I developed the entire system end-to-end — backend logic, API routes, and a cu
 Deployed via Vercel and Railway with automated GitHub Actions for CI/CD, it now manages over 100 product SKUs and powers Allpac’s online storefront. 
 The responsive interface, product pages, and smooth checkout flow increased sales efficiency and reduced manual quoting overhead.
     `,
-    image: "/images/allpac-store.png", // placeholder → allpac-store.png
+    image: "/images/projects/allpac-store.png",
     tech: ["React.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
     categories: ["Web App"],
     demo: "https://allpacstore.com",
@@ -25,24 +25,10 @@ The front end uses GROQ queries for real-time content updates, allowing the clie
 Its optimized layouts achieve Lighthouse performance scores above 95, and the system cut manual content entry time by over 80%. 
 Built for maintainability and speed, the site runs on Vercel and connects directly to Sanity’s global CDN.
     `,
-    image: "/images/lapurity-catalog.png", // placeholder → lapurity-catalog.png
+    image: "/images/projects/lapurity-catalog.png", // placeholder → lapurity-catalog.png
     tech: ["Next.js", "Sanity CMS", "GROQ", "Tailwind CSS", "TypeScript"],
     categories: ["Web App"],
     demo: "https://lapurity-water-tech.com",
-  },
-  {
-    slug: "warehouse-invoicing-app",
-    title: "Warehouse Invoicing App",
-    description: `
-A Python-Flask web application that automates monthly invoice generation for warehouse storage operations. 
-It ingests CSV datasets, aggregates import/export data, and automatically generates detailed invoice reports. 
-I designed REST APIs for real-time tracking dashboards and deployed the system inside Docker for easy portability. 
-The modular interface enables staff to view pallet trends and export billing summaries with a single click. 
-This automation replaced nearly all manual spreadsheet work, cutting processing time by roughly 95%.
-    `,
-    image: "/images/warehouse-invoicing.png", // placeholder → warehouse-invoicing.png
-    tech: ["Flask", "Python", "JavaScript", "Docker", "HTML/CSS"],
-    categories: ["Web App"],
   },
   {
     slug: "orora-invoice-generator",
@@ -54,9 +40,10 @@ I implemented server-side validation, error handling, and a dynamic preview inte
 By automating calculations and document formatting, the tool reduced invoice turnaround from hours to minutes. 
 Its simple web interface and backend logic make it adaptable for any logistics or distribution environment.
     `,
-    image: "/images/orora-invoice.png", // placeholder → orora-invoice.png
+    image: "/images/projects/orora-invoice.png", // placeholder → orora-invoice.png
     tech: ["Python", "Flask", "JavaScript", "HTML", "CSS"],
     categories: ["Web App"],
+    github: "https://github.com/MohammadLab/PalletsStockManager",
   },
   {
     slug: "reuseai",
@@ -68,7 +55,7 @@ I designed the front-end interface, API prompts, and moderation layer to filter 
 The result is a clean, fast tool demonstrating responsible AI integration for environmental education. 
 It was deployed under my portfolio domain as an example of real-world AI service use.
     `,
-    image: "/images/reuseai.png", // placeholder → reuseai.png
+    image: "/images/projects/reuseai.png", // placeholder → reuseai.png
     tech: ["Flask", "Gemini API", "JavaScript", "HTML", "CSS"],
     categories: ["Web App", "AI/ML"],
     github: "https://github.com/MohammadLab/AI-Recycle-or-Reuse-generator",
@@ -84,7 +71,7 @@ I worked on integrating database synchronization, user authentication, and dynam
 The app provides educational insights and gamified milestones that encourage sustainable decisions. 
 Its modular design allows future expansion into campus-wide sustainability challenges.
     `,
-    image: "/images/green-tech.png", // placeholder → green-tech.png
+    image: "/images/projects/green-tech.png", // placeholder → green-tech.png
     tech: ["React Native", "Firebase", "TypeScript"],
     categories: ["Web App", "AI/ML"],
   },
@@ -100,7 +87,7 @@ I built robust input validation, record filtering, and summary generation for qu
 It allows dynamic mark entry and automatic grade calculations while remaining fully local — no internet or database setup required. 
 Used weekly to simplify grading, it increased marking accuracy and consistency across student submissions.
     `,
-    image: "/images/ta-tracker.png", // placeholder → ta-tracker.png
+    image: "/images/projects/ta-tracker.png", // placeholder → ta-tracker.png
     tech: ["Python", "HTML", "XML"],
     categories: ["Tools"],
     github: "https://github.com/MohammadLab/TA-Marking-App",
@@ -115,7 +102,7 @@ The interface shows inbound/outbound shipment logs, pallet usage statistics, and
 This tool replaced manual paper tracking and helped operations managers make faster data-driven decisions. 
 Designed for scalability, it can easily integrate with existing ERP or dashboard systems.
     `,
-    image: "/images/logistics-tracker.png", // placeholder → logistics-tracker.png
+    image: "/images/projects/logistics-tracker.png", // placeholder → logistics-tracker.png
     tech: ["Java", "Firebase", "SQL"],
     categories: ["Tools"],
     github: "https://github.com/MohammadLab/Logistics-Storage-Tracker",
@@ -132,7 +119,7 @@ I designed the system for reusability across both FPS and third-person prototype
 This pack became the foundation for multiple personal and collaborative UE5/UEFN projects, improving overall gameplay feel. 
 It’s modular, performance-optimized, and serves as my go-to base for rapid game prototyping.
     `,
-    image: "/images/movement-pack.png", // placeholder → movement-pack.png
+    image: "/images/projects/movement-pack.png", // placeholder → movement-pack.png
     tech: ["Unreal Engine 5", "Blueprints", "C++"],
     categories: ["Game Dev"],
   },
@@ -146,7 +133,7 @@ I built and tuned the course around jump physics and camera movement to ensure s
 Custom materials and lighting were used to create a colorful, competitive atmosphere suitable for short play sessions.  
 This map demonstrates my understanding of pacing, player feedback loops, and reward timing in UEFN gameplay design.
   `,
-    image: "/images/uefn-fallguys.png", // placeholder → uefn-fallguys.png
+    image: "/images/projects/uefn-fallguys.png", // placeholder → uefn-fallguys.png
     tech: ["UEFN", "Blueprints", "Level Design", "Gameplay Flow"],
     categories: ["Game Dev"],
   },
@@ -160,7 +147,7 @@ I focused on tuning weapon feedback, camera recoil, and time-to-kill to achieve 
 The environment features close-quarters encounters balanced by open sightlines for tactical variety.  
 This project showcases my ability to build combat systems and responsive player controls within Unreal’s gameplay framework.
   `,
-    image: "/images/uefn-fps.png", // placeholder → uefn-fps.png
+    image: "/images/projects/uefn-fps.png", // placeholder → uefn-fps.png
     tech: ["UEFN", "Blueprints", "Unreal Engine 5", "Cinematics"],
     categories: ["Game Dev"],
   },
@@ -174,7 +161,7 @@ I carefully balanced lighting, fog density, and AI patrol paths to maintain susp
 Audio direction was handled with layered reverb and distance-based triggers to convey presence and threat.  
 This project demonstrates my ability to merge audio design, level scripting, and emotional pacing in game environments.
   `,
-    image: "/images/uefn-horror.png", // placeholder → uefn-horror.png
+    image: "/images/projects/uefn-horror.png", // placeholder → uefn-horror.png
     tech: ["UEFN", "Blueprints", "Audio Systems", "Lighting Design"],
     categories: ["Game Dev"],
   },

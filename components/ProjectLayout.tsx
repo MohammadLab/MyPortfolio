@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
+
 
 type Project = {
     slug: string;
@@ -17,6 +21,8 @@ type Project = {
 };
 
 export function ProjectLayout({ project }: { project: Project }) {
+    const [activeImage, setActiveImage] = useState<string | null>(null);
+
     return (
         <section className="relative py-16">
             {/* ───── Hero Banner ───── */}
@@ -146,19 +152,74 @@ export function ProjectLayout({ project }: { project: Project }) {
                         </ul>
                     </div>
 
-                    {/* Placeholder for screenshots / gallery */}
+                    {/* Dynamic Gallery with Lightbox */}
                     <div className="border-t border-white/10 pt-8">
-                        <h2 className="text-2xl font-semibold text-[#0095FF] mb-3">
-                            Gallery
-                        </h2>
+                        <h2 className="text-2xl font-semibold text-[#0095FF] mb-3">Gallery</h2>
+
                         <div className="grid sm:grid-cols-2 gap-4">
-                            <div className="aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-white/50">
-                                Screenshot 1
-                            </div>
-                            <div className="aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-white/50">
-                                Screenshot 2
-                            </div>
+                            {[1, 2].map((i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ scale: 1.02 }}
+                                    className="aspect-video rounded-lg border border-white/10 overflow-hidden bg-black/20 cursor-pointer"
+                                    onClick={() =>
+                                        setActiveImage(`/images/projects/${project.slug}/screenshot${i}.png`)
+                                    }
+                                >
+                                    <Image
+                                        src={`/images/projects/${project.slug}/screenshot${i}.png`}
+                                        alt={`${project.title} screenshot ${i}`}
+                                        width={1280}
+                                        height={720}
+                                        className="object-cover w-full h-full"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        onError={(e) => {
+                                            const target = e.target as HTMLImageElement;
+                                            target.src = "/images/placeholder-dark.png";
+                                        }}
+                                    />
+                                </motion.div>
+                            ))}
                         </div>
+
+                        {/* Lightbox Overlay */}
+                        <AnimatePresence>
+                            {activeImage && (
+                                <motion.div
+                                    className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    onClick={() => setActiveImage(null)}
+                                >
+                                    <motion.div
+                                        initial={{ scale: 0.95, opacity: 0 }}
+                                        animate={{ scale: 1, opacity: 1 }}
+                                        exit={{ scale: 0.95, opacity: 0 }}
+                                        transition={{ type: 'spring', stiffness: 120, damping: 12 }}
+                                        className="relative max-w-5xl w-full"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <button
+                                            onClick={() => setActiveImage(null)}
+                                            className="absolute top-3 right-3 z-50 p-2 bg-black/50 rounded-full border border-white/10 hover:bg-black/70 transition"
+                                        >
+                                            <X className="h-5 w-5 text-white" />
+                                        </button>
+
+                                        <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                                            <Image
+                                                src={activeImage}
+                                                alt={`${project.title} enlarged view`}
+                                                fill
+                                                sizes="100vw"
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    </motion.div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                 </motion.article>
             </div>
