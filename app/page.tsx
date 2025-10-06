@@ -19,13 +19,32 @@ export default function HomePage() {
 
       {/* Featured General Projects */}
       <section id="featured">
-        <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold">Featured Projects</h2>
+          <a
+            href="/projects#web"
+            className="text-sm px-4 py-2 rounded-lg border border-[#0095FF]/50 text-[#0095FF] hover:bg-[#0095FF]/10 transition"
+          >
+            View All →
+          </a>
+        </div>
+
         <ProjectGrid items={featuredGeneral} />
       </section>
 
+
       {/* Featured Game Dev Projects */}
       <section id="game-dev">
-        <h2 className="text-3xl font-bold mb-8">Featured Game Dev</h2>
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold">Featured Game Dev</h2>
+          <a
+            href="/projects#game-dev"
+            className="text-sm px-4 py-2 rounded-lg border border-[#0095FF]/50 text-[#0095FF] hover:bg-[#0095FF]/10 transition"
+          >
+            View All →
+          </a>
+        </div>
+
         <ProjectGrid items={featuredGameDev} />
       </section>
     </div>
