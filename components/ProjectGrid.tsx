@@ -17,10 +17,11 @@ export function ProjectGrid({ items }: { items: Item[] }) {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((p) => (
         <Link key={p.slug} href={`/projects/${p.slug}`} className="group">
-          <div className="border border-white/10 rounded-xl overflow-hidden hover:border-brand transition">
+          <div className="flex flex-col h-full min-h-[430px] sm:min-h-[460px] lg:min-h-[500px] border border-white/10 rounded-xl overflow-hidden hover:border-[#0095FF]/50 transition-transform duration-200 hover:-translate-y-1.5">
+            {/* Image Section */}
             <div
               className="aspect-video bg-black/30 relative"
-              suppressHydrationWarning // 👈 fixes SSR/client mismatch for next/image
+              suppressHydrationWarning
             >
               {p.image && (
                 <Image
@@ -32,12 +33,18 @@ export function ProjectGrid({ items }: { items: Item[] }) {
                 />
               )}
             </div>
-            <div className="p-4 space-y-2">
-              <h3 className="text-lg font-semibold group-hover:text-brand transition">
+
+            {/* Text Section */}
+            <div className="flex flex-col flex-1 p-4 space-y-2">
+              <h3 className="text-lg font-semibold group-hover:text-[#0095FF] transition">
                 {p.title}
               </h3>
-              <p className="text-sm opacity-80 line-clamp-2">{p.description}</p>
-              <div className="flex flex-wrap gap-2 pt-2">
+              <p className="text-sm opacity-80 leading-relaxed line-clamp-5 flex-grow">
+                {p.description}
+              </p>
+
+              {/* Tech Tags */}
+              <div className="flex flex-wrap gap-2 pt-2 mt-auto">
                 {p.tech.slice(0, 4).map((t) => (
                   <span
                     key={t}
