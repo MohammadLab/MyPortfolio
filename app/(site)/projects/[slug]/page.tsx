@@ -1,59 +1,21 @@
+import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
-import Image from "next/image";
+import { ProjectLayout } from "@/components/ProjectLayout";
 
-// ✅ The params prop must be async in Next.js 15
-type PageProps = {
-  params: Promise<{ slug: string }>;
-};
-
-// ✅ Generate static params for all project pages
-export async function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+interface Props {
+  params: Promise<{ slug: string }>; // 👈 params is async
 }
 
-export default async function ProjectPage({ params }: PageProps) {
-  // ✅ Await params before accessing
-  const { slug } = await params;
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params; // 👈 must await before accessing
 
   const project = projects.find((p) => p.slug === slug);
 
-  if (!project) {
-    return (
-      <div className="container py-20 text-center">
-        <h1 className="text-3xl font-semibold">Project not found</h1>
-      </div>
-    );
-  }
+  if (!project) return notFound();
 
-  return (
-    <div className="container py-20 space-y-8">
-      <h1 className="text-4xl font-bold">{project.title}</h1>
+  return <ProjectLayout project={project} />;
+}
 
-      {project.image && (
-        <div className="relative aspect-video w-full max-w-3xl mx-auto">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover rounded-lg"
-          />
-        </div>
-      )}
-
-      <p className="text-lg opacity-90 max-w-2xl mx-auto text-center">
-        {project.description}
-      </p>
-
-      <div className="flex flex-wrap justify-center gap-3">
-        {project.tech.map((t) => (
-          <span
-            key={t}
-            className="px-3 py-1 border border-white/10 rounded-md text-sm"
-          >
-            {t}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
+export async function generateStaticParams() {
+  return projects.map((p) => ({ slug: p.slug }));
 }

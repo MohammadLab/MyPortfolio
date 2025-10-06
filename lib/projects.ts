@@ -71,8 +71,8 @@ It was deployed under my portfolio domain as an example of real-world AI service
     image: "/images/reuseai.png", // placeholder → reuseai.png
     tech: ["Flask", "Gemini API", "JavaScript", "HTML", "CSS"],
     categories: ["Web App", "AI/ML"],
-    github: "https://github.com/MohammadLab/ReUseAI",
-    demo: "https://mohammadlabak.com",
+    github: "https://github.com/MohammadLab/AI-Recycle-or-Reuse-generator",
+
   },
   {
     slug: "uwindsor-green-tech",
@@ -137,19 +137,48 @@ It’s modular, performance-optimized, and serves as my go-to base for rapid gam
     categories: ["Game Dev"],
   },
   {
-    slug: "uefn-projects",
-    title: "UEFN Game Collection",
+    slug: "uefn-fall-guys-map",
+    title: "UEFN — Fall Guys-Style Obstacle Map",
     description: `
-A series of three projects developed using Unreal Editor for Fortnite (UEFN), each exploring unique gameplay and design challenges. 
-The first, a Fall Guys-style obstacle map, emphasizes movement rhythm, timing, and reward pacing for satisfying flow. 
-The second is a fast-paced FPS prototype built atop my custom UE5 Movement Pack, balancing recoil physics and traversal. 
-The third is an atmospheric horror map driven by audio cues and AI-triggered sound events that mislead or guide the player. 
-Together, these maps demonstrate expertise in level design, sound engineering, and Unreal’s Blueprint logic system.
-    `,
-    image: "/images/uefn-collection.png", // placeholder → uefn-collection.png
-    tech: ["UEFN", "Blueprints", "Level Design", "Audio Systems"],
+A bright, fast-paced obstacle course created in Unreal Editor for Fortnite (UEFN), inspired by Fall Guys.  
+This project emphasizes timing, flow, and reward pacing, blending fun mechanics with accessible level design.  
+I built and tuned the course around jump physics and camera movement to ensure satisfying traversal across checkpoints.  
+Custom materials and lighting were used to create a colorful, competitive atmosphere suitable for short play sessions.  
+This map demonstrates my understanding of pacing, player feedback loops, and reward timing in UEFN gameplay design.
+  `,
+    image: "/images/uefn-fallguys.png", // placeholder → uefn-fallguys.png
+    tech: ["UEFN", "Blueprints", "Level Design", "Gameplay Flow"],
     categories: ["Game Dev"],
   },
+  {
+    slug: "uefn-fps-prototype",
+    title: "UEFN — First-Person Shooter Prototype",
+    description: `
+A high-speed FPS prototype developed in UEFN to explore aim feel, recoil balance, and movement mechanics.  
+Built atop my custom Unreal Engine 5 Movement Pack, this project combines sprinting, sliding, and wall-running physics.  
+I focused on tuning weapon feedback, camera recoil, and time-to-kill to achieve responsive, skill-based combat.  
+The environment features close-quarters encounters balanced by open sightlines for tactical variety.  
+This project showcases my ability to build combat systems and responsive player controls within Unreal’s gameplay framework.
+  `,
+    image: "/images/uefn-fps.png", // placeholder → uefn-fps.png
+    tech: ["UEFN", "Blueprints", "Unreal Engine 5", "Cinematics"],
+    categories: ["Game Dev"],
+  },
+  {
+    slug: "uefn-horror-map",
+    title: "UEFN — Audio-Driven Horror Map",
+    description: `
+An atmospheric horror experience built in UEFN, designed around spatial audio and psychological tension.  
+Instead of relying on jump scares, this map uses dynamic sound cues and AI-triggered events to mislead or guide the player.  
+I carefully balanced lighting, fog density, and AI patrol paths to maintain suspense and immersion.  
+Audio direction was handled with layered reverb and distance-based triggers to convey presence and threat.  
+This project demonstrates my ability to merge audio design, level scripting, and emotional pacing in game environments.
+  `,
+    image: "/images/uefn-horror.png", // placeholder → uefn-horror.png
+    tech: ["UEFN", "Blueprints", "Audio Systems", "Lighting Design"],
+    categories: ["Game Dev"],
+  },
+
 ];
 /*
 
