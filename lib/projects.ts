@@ -76,38 +76,6 @@ Its modular design allows future expansion into campus-wide sustainability chall
     categories: ["Web App", "AI/ML"],
   },
 
-  // ────────────────  TOOLS & AUTOMATION  ────────────────
-  {
-    slug: "ta-marking-tracker",
-    title: "TA Marking Tracker App",
-    description: `
-A lightweight Python-based tool for Teaching Assistants to track grades, attendance, and student progress efficiently. 
-The app uses a simple HTML interface with XML data storage for portability and easy offline use. 
-I built robust input validation, record filtering, and summary generation for quick feedback during lab sessions. 
-It allows dynamic mark entry and automatic grade calculations while remaining fully local — no internet or database setup required. 
-Used weekly to simplify grading, it increased marking accuracy and consistency across student submissions.
-    `,
-    image: "/images/projects/ta-tracker.png", // placeholder → ta-tracker.png
-    tech: ["Python", "HTML", "XML"],
-    categories: ["Tools"],
-    github: "https://github.com/MohammadLab/TA-Marking-App",
-  },
-  {
-    slug: "logistics-storage-tracker",
-    title: "Logistics Storage Tracker",
-    description: `
-An inventory and pallet-tracking tool built in Java to help a logistics company monitor shipments in real time. 
-I developed the backend data model and UI synchronization with a cloud database, providing live visibility of warehouse operations. 
-The interface shows inbound/outbound shipment logs, pallet usage statistics, and product movement trends. 
-This tool replaced manual paper tracking and helped operations managers make faster data-driven decisions. 
-Designed for scalability, it can easily integrate with existing ERP or dashboard systems.
-    `,
-    image: "/images/projects/logistics-tracker.png", // placeholder → logistics-tracker.png
-    tech: ["Java", "Firebase", "SQL"],
-    categories: ["Tools"],
-    github: "https://github.com/MohammadLab/Logistics-Storage-Tracker",
-  },
-
   // ────────────────  UNREAL ENGINE / GAME DEV  ────────────────
   {
     slug: "movement-pack-ue5",
@@ -139,7 +107,7 @@ This map demonstrates my understanding of pacing, player feedback loops, and rew
   },
   {
     slug: "uefn-fps-prototype",
-    title: "UEFN — First-Person Shooter Prototype",
+    title: "UEFN — The Bridges",
     description: `
 A high-speed FPS prototype developed in UEFN to explore aim feel, recoil balance, and movement mechanics.  
 Built atop my custom Unreal Engine 5 Movement Pack, this project combines sprinting, sliding, and wall-running physics.  
