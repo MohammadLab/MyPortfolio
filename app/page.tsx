@@ -47,6 +47,27 @@ export default function HomePage() {
 
         <ProjectGrid items={featuredGameDev} />
       </section>
+
+
+      {/* Featured Workshops */}
+      <section id="workshops">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold">Workshops</h2>
+          <a
+            href="/projects#workshops"
+            className="text-sm px-4 py-2 rounded-lg border border-[#0095FF]/50 text-[#0095FF] hover:bg-[#0095FF]/10 transition"
+          >
+            View All →
+          </a>
+        </div>
+
+        <ProjectGrid
+          items={projects
+            .filter((p) => p.categories.includes("Workshop"))
+            .slice(0, 2)} // only show 2 workshops on homepage
+        />
+      </section>
+
     </div>
   );
 }

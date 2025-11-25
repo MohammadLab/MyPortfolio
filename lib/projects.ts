@@ -57,7 +57,7 @@ It was deployed under my portfolio domain as an example of real-world AI service
     `,
     image: "/images/projects/reuseai.png", // placeholder → reuseai.png
     tech: ["Flask", "Gemini API", "JavaScript", "HTML", "CSS"],
-    categories: ["Web App", "AI/ML"],
+    categories: ["Web App", "AI/ML", "Workshop"],
     github: "https://github.com/MohammadLab/AI-Recycle-or-Reuse-generator",
 
   },
@@ -132,6 +132,23 @@ This project demonstrates my ability to merge audio design, level scripting, and
     image: "/images/projects/uefn-horror.png", // placeholder → uefn-horror.png
     tech: ["UEFN", "Blueprints", "Audio Systems", "Lighting Design"],
     categories: ["Game Dev"],
+  },
+  {
+    slug: "ecocheck-workshop",
+    title: "EcoCheck — AI Recycling Scanner Workshop",
+    description: `
+                Led a hands-on workshop at the University of Windsor for science and computer science students, introducing AI image classification in the browser using TensorFlow.js and MobileNet.  
+                Attendees built **EcoCheck**, a lightweight, browser-based recycling scanner that classifies uploaded images and determines if an item is recyclable — entirely offline with no backend or API key.  
+                The workshop demonstrated real-time model inference, confidence scoring, and keyword-based recycling logic, helping beginners understand practical AI integration in web development.  
+                I created all workshop materials — slides, starter code, live demo, and branding under UWin Green Tech.
+                  `,
+    image: "/images/projects/ecocheck-workshop.png",
+    tech: ["HTML", "CSS", "JavaScript", "TensorFlow.js", "MobileNet v2"],
+    categories: ["Workshop"],
+    date: "November 28, 2025",
+    location: "Dillon Hall 264, University of Windsor",
+    event: "Green Tech Coding Workshop",
+    filesZip: "/files/reuseai-project-files.zip",
   },
 
 ];

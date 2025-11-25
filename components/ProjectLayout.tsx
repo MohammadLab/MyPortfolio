@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
@@ -18,6 +18,7 @@ type Project = {
     categories: string[];
     github?: string;
     demo?: string;
+    filesZip?: string;
 };
 
 export function ProjectLayout({ project }: { project: Project }) {
@@ -100,6 +101,7 @@ export function ProjectLayout({ project }: { project: Project }) {
                                     </a>
                                 </Button>
                             )}
+
                             {project.github && (
                                 <Button
                                     asChild
@@ -111,7 +113,30 @@ export function ProjectLayout({ project }: { project: Project }) {
                                     </a>
                                 </Button>
                             )}
+
+                            {/* 🔹 New download button */}
+                            {project.filesZip && (
+                                <Button
+                                    asChild
+                                    className="
+                                                  w-full
+                                                  bg-[#1a1a1a] 
+                                                  hover:bg-[#2a2a2a]
+                                                  text-white
+                                                  border border-white/10 
+                                                  hover:border-white/20
+                                                  transition
+                                                "
+                                >
+                                    <a href={project.filesZip} download>
+                                        <FileDown className="mr-2 h-4 w-4" />
+                                        Download Project Files
+                                    </a>
+                                </Button>
+                            )}
+
                         </div>
+
                     </motion.div>
                 </aside>
 
