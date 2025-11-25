@@ -148,7 +148,7 @@ This project demonstrates my ability to merge audio design, level scripting, and
     date: "November 28, 2025",
     location: "Dillon Hall 264, University of Windsor",
     event: "Green Tech Coding Workshop",
-    filesZip: "/files/reuseai-project-files.zip",
+    filesZip: "/files/ecocheck-project-files.zip",
   },
 
 ];
