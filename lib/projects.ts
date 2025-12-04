@@ -57,7 +57,7 @@ It was deployed under my portfolio domain as an example of real-world AI service
     `,
     image: "/images/projects/reuseai.png", // placeholder → reuseai.png
     tech: ["Flask", "Gemini API", "JavaScript", "HTML", "CSS"],
-    categories: ["Web App", "AI/ML", "Workshop"],
+    categories: ["AI/ML", "Workshop"],
     github: "https://github.com/MohammadLab/AI-Recycle-or-Reuse-generator",
 
   },
