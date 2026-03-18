@@ -4,6 +4,7 @@ import Link from "next/link";
 type Item = {
   slug: string;
   title: string;
+  summary?: string;
   description: string;
   image?: string;
   tech: string[];
@@ -41,7 +42,7 @@ export function ProjectGrid({ items }: { items: Item[] }) {
                 {p.title}
               </h3>
               <p className="text-sm opacity-80 leading-relaxed line-clamp-5 flex-grow">
-                {p.description}
+                {(p.summary ?? p.description).trim()}
               </p>
 
               {/* Tech Tags */}

@@ -1,4 +1,71 @@
 export const projects = [
+  {
+    slug: "sentinel-fieldview",
+    title: "Sentinel FieldView",
+    description: `
+Sentinel FieldView is a multi-device systems prototype for real-time floorplan-based guidance and AR-assisted situational awareness.
+It combines a WinUI 3 desktop operator tool, an authoritative C#/.NET UDP relay, and an Android viewer built with Kotlin and Jetpack Compose to synchronize markers, paths, and zones across devices.
+The platform uses a custom UDP protocol with diff-based overlay updates, ACK handling, sequence tracking, and snapshot-based recovery when viewers detect gaps.
+On the desktop side, the operator application supports real editing workflows including structured tool modes, snapping, selection, dragging, path and zone editing, erasing, and undo/redo.
+Phase 2 extends the system into AR using ARCore and SceneView, where calibrated floorplan overlays are projected into world space as anchored markers and line geometry.
+The project was designed with clear separation between authoring, relay-side state authority, viewer rendering, and AR projection, while laying groundwork for later security hardening such as encrypted UDP, replay protection, authentication, and auditability.
+    `,
+    tech: ["C#", ".NET", "WinUI 3", "Kotlin", "ARCore"],
+    categories: ["Systems"],
+  },
+  {
+    slug: "electric-motor-simulation-automation",
+    title: "Electric Motor Design, Simulation & Python Automation",
+    summary: `
+An end-to-end engineering project combining SolidWorks CAD, ANSYS simulation, and Python-based workflow automation to evaluate electric motor designs under varying test conditions.
+    `,
+    description: `
+This project brought together mechanical design, simulation, and scripting into a single engineering workflow centered on electric motor development. The motor geometry was designed in SolidWorks, refined for simulation readiness, and then recreated or imported into ANSYS for validation under different operating conditions. Python was used to automate repeated test setups, parameter changes, and analysis tasks, turning what would normally be a manual simulation loop into a more efficient and repeatable process.
+
+The result is a multidisciplinary project focused on simulation-driven design decisions rather than isolated modeling. It demonstrates an ability to move from CAD creation to engineering validation, then extend that workflow with software automation to support iteration, consistency, and deeper analysis.
+    `,
+    tech: ["SolidWorks", "ANSYS", "Python", "CAD", "Simulation"],
+    categories: ["Engineering"],
+    gallery: [],
+    sections: [
+      {
+        heading: "Tech Stack / Tools Used",
+        content: `
+SolidWorks was used to design and refine the 3D motor geometry, with attention to building a model that was not only mechanically coherent but also suitable for downstream simulation work. ANSYS was used to evaluate behavior across different design conditions, supporting validation and comparison between iterations. Python was used to automate parts of the testing and analysis workflow, including parameter variation, repeated runs, and structured data handling for simulation review.
+        `,
+      },
+      {
+        heading: "Key Responsibilities / What I Did",
+        content: `
+The project covered the full workflow from model creation through analysis automation. Responsibilities included designing the motor in SolidWorks, refining geometry for simulation readiness, importing or recreating the design in ANSYS, evaluating motor behavior under different conditions, and building Python scripts to reduce manual repetition in the testing process. The work also involved interpreting simulation output and using those results to guide further design refinement.
+        `,
+      },
+      {
+        heading: "Engineering Workflow",
+        content: `
+The workflow began with CAD development in SolidWorks, where the motor geometry was built and iterated with simulation in mind. From there, the design was transferred into ANSYS for analysis under multiple conditions so that behavior could be observed and compared in a structured way. Python automation was layered on top of that process to streamline repeated testing, manage parameter changes, and improve the consistency of analysis across iterations. This created a tighter feedback loop between design, validation, and refinement.
+        `,
+      },
+      {
+        heading: "Challenges and Problem Solving",
+        content: `
+One of the main engineering challenges was connecting design work and simulation work in a way that remained efficient across multiple iterations. CAD models often need cleanup or refinement before they are ready for reliable simulation, so the geometry had to be adjusted with downstream analysis in mind. Another challenge was reducing the time cost of repeated testing; Python was used to automate routine analysis steps so different design conditions could be evaluated more systematically and with less manual overhead.
+        `,
+      },
+      {
+        heading: "Outcome / What This Project Demonstrates",
+        content: `
+This project demonstrates the ability to work across mechanical design tools, simulation environments, and software automation in one integrated system. It reflects practical engineering thinking around validation, iteration, and efficiency, and shows how programming can strengthen traditional engineering workflows. More broadly, it highlights the ability to build repeatable technical processes rather than treating CAD, analysis, and scripting as isolated tasks.
+        `,
+      },
+    ],
+    highlights: [
+      "Designed and refined a 3D electric motor model in SolidWorks with simulation-readiness in mind.",
+      "Validated design behavior in ANSYS under multiple conditions to support simulation-driven iteration.",
+      "Built Python automation for repeated testing, parameter variation, and analysis workflow efficiency.",
+      "Integrated CAD, simulation, and scripting into a repeatable engineering workflow rather than a one-off model.",
+    ],
+  },
   // ────────────────  WEB APP PROJECTS  ────────────────
   {
     slug: "allpac-store",
@@ -45,7 +112,7 @@ Its simple web interface and backend logic make it adaptable for any logistics o
     categories: ["Web App"],
     github: "https://github.com/MohammadLab/PalletsStockManager",
   },
-  {
+  /* {
     slug: "reuseai",
     title: "ReUseAI — AI-Powered Sustainability Assistant",
     description: `
@@ -60,8 +127,8 @@ It was deployed under my portfolio domain as an example of real-world AI service
     categories: ["AI/ML", "Workshop"],
     github: "https://github.com/MohammadLab/AI-Recycle-or-Reuse-generator",
 
-  },
-  {
+  }, */
+  /* {
     slug: "uwindsor-green-tech",
     title: "UWindsor Green Tech — Carbon Footprint Tracker",
     description: `
@@ -74,7 +141,7 @@ Its modular design allows future expansion into campus-wide sustainability chall
     image: "/images/projects/green-tech.png", // placeholder → green-tech.png
     tech: ["React Native", "Firebase", "TypeScript"],
     categories: ["Web App", "AI/ML"],
-  },
+  }, */
 
   // ────────────────  UNREAL ENGINE / GAME DEV  ────────────────
   {
@@ -91,7 +158,7 @@ It’s modular, performance-optimized, and serves as my go-to base for rapid gam
     tech: ["Unreal Engine 5", "Blueprints", "C++"],
     categories: ["Game Dev"],
   },
-  {
+  /* {
     slug: "uefn-fall-guys-map",
     title: "UEFN — Fall Guys-Style Obstacle Map",
     description: `
@@ -104,8 +171,8 @@ This map demonstrates my understanding of pacing, player feedback loops, and rew
     image: "/images/projects/uefn-fallguys.png", // placeholder → uefn-fallguys.png
     tech: ["UEFN", "Blueprints", "Level Design", "Gameplay Flow"],
     categories: ["Game Dev"],
-  },
-  {
+  }, */
+  /* {
     slug: "uefn-fps-prototype",
     title: "UEFN — The Bridges",
     description: `
@@ -118,7 +185,7 @@ This project showcases my ability to build combat systems and responsive player 
     image: "/images/projects/uefn-fps.png", // placeholder → uefn-fps.png
     tech: ["UEFN", "Blueprints", "Unreal Engine 5", "Cinematics"],
     categories: ["Game Dev"],
-  },
+  }, */
   {
     slug: "uefn-horror-map",
     title: "UEFN — Audio-Driven Horror Map",
@@ -133,7 +200,7 @@ This project demonstrates my ability to merge audio design, level scripting, and
     tech: ["UEFN", "Blueprints", "Audio Systems", "Lighting Design"],
     categories: ["Game Dev"],
   },
-  {
+  /* {
     slug: "ecocheck-workshop",
     title: "EcoCheck — AI Recycling Scanner Workshop",
     description: `
@@ -149,7 +216,7 @@ This project demonstrates my ability to merge audio design, level scripting, and
     location: "Dillon Hall 264, University of Windsor",
     event: "Green Tech Coding Workshop",
     filesZip: "/files/ecocheck-project-files.zip",
-  },
+  }, */
 
 ];
 /*
