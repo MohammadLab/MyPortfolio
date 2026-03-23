@@ -10,6 +10,7 @@ On the desktop side, the operator application supports real editing workflows in
 Phase 2 extends the system into AR using ARCore and SceneView, where calibrated floorplan overlays are projected into world space as anchored markers and line geometry.
 The project was designed with clear separation between authoring, relay-side state authority, viewer rendering, and AR projection, while laying groundwork for later security hardening such as encrypted UDP, replay protection, authentication, and auditability.
     `,
+    image: "/images/projects/sentinel-fieldview.png",
     tech: ["C#", ".NET", "WinUI 3", "Kotlin", "ARCore"],
     categories: ["Systems"],
   },
@@ -22,11 +23,14 @@ An end-to-end engineering project combining SolidWorks CAD, ANSYS simulation, an
     description: `
 This project brought together mechanical design, simulation, and scripting into a single engineering workflow centered on electric motor development. The motor geometry was designed in SolidWorks, refined for simulation readiness, and then recreated or imported into ANSYS for validation under different operating conditions. Python was used to automate repeated test setups, parameter changes, and analysis tasks, turning what would normally be a manual simulation loop into a more efficient and repeatable process.
 
-The result is a multidisciplinary project focused on simulation-driven design decisions rather than isolated modeling. It demonstrates an ability to move from CAD creation to engineering validation, then extend that workflow with software automation to support iteration, consistency, and deeper analysis.
+    The result is a multidisciplinary project focused on simulation-driven design decisions rather than isolated modeling. It demonstrates an ability to move from CAD creation to engineering validation, then extend that workflow with software automation to support iteration, consistency, and deeper analysis.
     `,
+    image: "/images/projects/electric-motor-simulation-automation.png",
     tech: ["SolidWorks", "ANSYS", "Python", "CAD", "Simulation"],
     categories: ["Engineering"],
-    gallery: [],
+    gallery: [
+      "/images/projects/electric-motor-simulation-automation/screenshot1.png",
+    ],
     sections: [
       {
         heading: "Tech Stack / Tools Used",
